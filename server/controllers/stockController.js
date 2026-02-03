@@ -1,5 +1,6 @@
 const axios = require("axios");
 const https = require("https");
+// Handles stock price fetching using Finnhub API
 
 const STOCK_API_URL = "https://finnhub.io/api/v1/quote";
 
