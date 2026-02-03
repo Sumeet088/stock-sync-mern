@@ -2,6 +2,7 @@ import { useState } from "react";
 import { fetchStock } from "../../services/api";
 import StockChart from "./StockChart";
 import { STOCKS } from "../../data/stocks";
+// Stock search with autocomplete, loading, and error states
 
 /* 🕒 MARKET STATUS HELPER */
 const isMarketOpen = () => {
