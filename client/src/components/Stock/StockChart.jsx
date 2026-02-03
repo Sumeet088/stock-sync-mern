@@ -7,6 +7,7 @@ import {
   Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
+// Renders stock price chart using Chart.js
 
 ChartJS.register(
   BarElement,
