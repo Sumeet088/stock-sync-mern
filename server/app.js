@@ -12,13 +12,15 @@ app.use(express.json());
 // API routes
 app.use("/api/stock", stockRoutes);
 
-// Serve frontend
-app.use(express.static(path.join(__dirname, "../client/dist")));
+// ✅ Serve frontend in production (Render-safe)
+if (process.env.NODE_ENV === "production") {
+  const clientPath = path.join(process.cwd(), "client", "dist");
 
-app.get("*", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "../client/dist/index.html")
-  );
-});
+  app.use(express.static(clientPath));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(clientPath, "index.html"));
+  });
+}
 
 module.exports = app;
