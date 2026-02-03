@@ -7,7 +7,6 @@ const SOCKET_URL =
 
 const socket = io(SOCKET_URL, {
   transports: ["polling", "websocket"],
-  withCredentials: true,
 });
 
 export default socket;
