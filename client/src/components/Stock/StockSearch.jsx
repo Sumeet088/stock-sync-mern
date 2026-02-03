@@ -3,6 +3,7 @@ import { fetchStock } from "../../services/api";
 import StockChart from "./StockChart";
 import { STOCKS } from "../../data/stocks";
 // Stock search with autocomplete, loading, and error states
+// Displays market open / closed status based on US trading hours
 
 /* 🕒 MARKET STATUS HELPER */
 const isMarketOpen = () => {
